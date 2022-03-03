@@ -13,18 +13,18 @@ if ($resultado) {
     echo "<br>";
     echo '<h1>Mostrando Datos de la tabla `users` correctamente</h1>';
 
+    /* obtener un array asociativo y luego multidimencional */
+    while ($fila = $resultado->fetch_assoc()) {
+        $filas[] = $fila;
 
-    /* obtener un array asociativo */
-    // $filas = $resultado->fetch_assoc();
-
-    while($fila=$resultado -> fetch_assoc()){
-        $filas[]= $fila;
-   }
-
+    }
+    // var_dump($filas);
 
     /* mostrar vista simple */
     include "../views/user_list_vista.php";
-
+    
 } else {
     echo 'Error al mostrar los datos de la tabla `users`';
 };
+
+$conexion -> close();

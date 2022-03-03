@@ -15,7 +15,8 @@
                 <h1>Listado de usuarios</h1>
 
 
-                <?php include 'users_list_controller.php'; ?>
+                <!-- <?php include '../users_register/controllers/users_list_controller.php'; ?> -->
+                <?php include 'users_list_controller.php'; ?> 
 
             </div>
         </div>

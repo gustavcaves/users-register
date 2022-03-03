@@ -18,5 +18,6 @@ if ($resultado) {
     echo 'Error al crear la tabla `user`';
 };
 
+$conexion -> close();
 
 
